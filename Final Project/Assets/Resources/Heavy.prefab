@@ -37,10 +37,10 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4873842042008342}
-  - component: {fileID: 114593845533261046}
   - component: {fileID: 195604197868911326}
   - component: {fileID: 54785569731270574}
   - component: {fileID: 136707659294844568}
+  - component: {fileID: 114248795180273520}
   m_Layer: 0
   m_Name: Heavy
   m_TagString: Enemy
@@ -84,11 +84,12 @@ MeshRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 08f5a521b08a94800a98f76ac4b8e066, type: 2}
+  - {fileID: 2100000, guid: bfacb71d2eea7c9459f3ff877d2c78b0, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -99,6 +100,7 @@ MeshRenderer:
   m_PreserveUVs: 1
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
   m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
@@ -129,7 +131,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &114593845533261046
+--- !u!114 &114248795180273520
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -137,11 +139,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 1849454852751556}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8cc2d85511bcb494cb7297ab655fb693, type: 3}
+  m_Script: {fileID: 11500000, guid: d2599d5ae2e789f42bbc330b34127876, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _killit: 0
-  _targ: {fileID: 0}
 --- !u!136 &136707659294844568
 CapsuleCollider:
   m_ObjectHideFlags: 1

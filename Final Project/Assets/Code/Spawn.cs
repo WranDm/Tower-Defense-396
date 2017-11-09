@@ -6,18 +6,23 @@ public class Spawn : MonoBehaviour {
 	
 	// Spawnee = Resources.Load("Mook");
 	// Use this for initialization
-	public GameObject hazard;
+	public GameObject hazardAv;
+    public GameObject hazardSpeedy;
+    public GameObject hazardHeavy;
 	public Vector3 spawnValues;
 	public int hazardCount;
 	public float spawnWait;
 	public float startWait;
 	public float waveWait;
+    public List<GameObject> allHazards;
 
 	void Start ()
 	{
 		StartCoroutine (SpawnWaves ());
-		hazard = Resources.Load("Mook") as GameObject;
-		hazardCount = 5;
+		hazardAv = Resources.Load("Mook") as GameObject;
+        hazardHeavy = Resources.Load("Heavy") as GameObject;
+        hazardSpeedy = Resources.Load("Speedy") as GameObject;
+        hazardCount = 5;
 		spawnValues = gameObject.transform.position;
 		spawnWait = 1.0f;
 		startWait = 2.0f;
@@ -31,11 +36,21 @@ public class Spawn : MonoBehaviour {
 		{
 			for (int i = 0; i < hazardCount; i++)
 			{
-				// Vector3 spawnPosition = new Vector3(Random.Range(-spawnValues.x, spawnValues.x), spawnValues.y, spawnValues.z);
-				Quaternion spawnRotation = Quaternion.identity;
-				Instantiate(hazard, spawnValues, spawnRotation);
-				yield return new WaitForSeconds(spawnWait);
-			}
+                if (i % 2 == 0)
+                {
+                    Quaternion spawnRotation = Quaternion.identity;
+                    Instantiate(hazardSpeedy, spawnValues, spawnRotation);
+                }
+                else
+                {
+                    Quaternion spawnRotation = Quaternion.identity;
+                    Instantiate(hazardAv, spawnValues, spawnRotation);
+                    
+                }
+                yield return new WaitForSeconds(spawnWait);
+
+            }
+
 			yield return new WaitForSeconds(waveWait);
 		}
 	}

@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 33742288129618298}
   - component: {fileID: 136095714053282898}
   - component: {fileID: 23276043189576062}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -41,7 +41,7 @@ GameObject:
   - component: {fileID: 195403199396784678}
   - component: {fileID: 54364433959095544}
   - component: {fileID: 136760736609565692}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Mook
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -84,6 +84,7 @@ MeshRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -99,6 +100,7 @@ MeshRenderer:
   m_PreserveUVs: 1
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
   m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
@@ -140,8 +142,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8cc2d85511bcb494cb7297ab655fb693, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _killit: 0
+  _killit: 10
   _targ: {fileID: 0}
+  _velocity: 1
 --- !u!136 &136095714053282898
 CapsuleCollider:
   m_ObjectHideFlags: 1
@@ -174,7 +177,7 @@ NavMeshAgent:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1344109967642912}
-  m_Enabled: 1
+  m_Enabled: 0
   m_AgentTypeID: 0
   m_Radius: 0.00001
   m_Speed: 3.5

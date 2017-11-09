@@ -9,6 +9,7 @@ TagManager:
   - Health_Bar
   - Bullet
   - Bullet_Spawn
+  - Money
   layers:
   - Default
   - TransparentFX
@@ -18,7 +19,7 @@ TagManager:
   - UI
   - 
   - 
-  - 
+  - enemy
   - 
   - 
   - 

@@ -11,14 +11,14 @@ namespace Code
 
 		public int _killit;
 		public Transform _targ;
-		private float _velocity;
+		public float _velocity;
 
 		// Use this for initialization
 		void Start()
 		{
-			_killit = 10;
+			//_killit = 10;
 			_targ = GameObject.FindGameObjectWithTag("Base").transform;
-			_velocity = 1.0f;
+			//_velocity = 1.0f;
 		}
 
 		// Update is called once per frame

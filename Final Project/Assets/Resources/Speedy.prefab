@@ -19,11 +19,11 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4125378223020514}
-  - component: {fileID: 114123409189536616}
   - component: {fileID: 195774400480357482}
   - component: {fileID: 54931401901129370}
   - component: {fileID: 136090148576858754}
-  m_Layer: 0
+  - component: {fileID: 114141502190370770}
+  m_Layer: 8
   m_Name: Speedy
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -41,7 +41,7 @@ GameObject:
   - component: {fileID: 33908307117832058}
   - component: {fileID: 136163570029324672}
   - component: {fileID: 23285099331595518}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -84,11 +84,12 @@ MeshRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: acdf1c4acbe2744b8929d182fd99c5a5, type: 2}
+  - {fileID: 2100000, guid: 88956aa44bfa6224bb0c71a6045c657b, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -99,6 +100,7 @@ MeshRenderer:
   m_PreserveUVs: 1
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
   m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
@@ -129,7 +131,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &114123409189536616
+--- !u!114 &114141502190370770
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -140,8 +142,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8cc2d85511bcb494cb7297ab655fb693, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _killit: 0
+  _killit: 5
   _targ: {fileID: 0}
+  _velocity: 2
 --- !u!136 &136090148576858754
 CapsuleCollider:
   m_ObjectHideFlags: 1
